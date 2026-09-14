@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- 1. Try to open the Telegram app instantly -->
     <meta http-equiv="refresh" content="0; url=tg://resolve">
-
-    <!-- 2. Fallback: Redirect to the browser version after 3 seconds if the app didn't open -->
-    <meta http-equiv="refresh" content="3; url=https://t.me">
-
-    <title>Opening Telegram...</title>
+    
+    <title>Open Telegram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .btn {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .btn-browser {
+            background-color: #0088cc;
+            color: white;
+        }
+        .btn-playstore {
+            background-color: #24292e;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <p>Trying to open the Telegram app...</p>
-    <p>If nothing happens, <a href="https://t.me">click here to use your browser instead</a>.</p>
+
+    <div class="container">
+        <h2>Opening Telegram...</h2>
+        <p>If the app did not open, Telegram might not be installed on your device.</p>
+        <p>Please choose an option below:</p>
+        
+        <!-- Option 1: Open in the web browser -->
+        <a href="https://t.me" class="btn btn-browser">
+            Click here to use Browser
+        </a>
+        
+        <!-- Option 2: Download from Google Play Store -->
+        <a href="https://google.com" class="btn btn-playstore" target="_blank">
+            Click here to download from Play Store
+        </a>
+    </div>
+
 </body>
 </html>
